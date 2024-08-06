@@ -1,3 +1,23 @@
-//add typewriter effect to biography
-//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
-//https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
+//https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+function typeWriter(elementId, speed) {
+    const element = document.getElementById(elementId);
+    const text = element.innerHTML;
+    let i = 0;
+    element.innerHTML = ''; // Clear existing content
+
+    const typing = setInterval(() =>{
+        if (i < text.length){
+            element.innerHTML += text.charAt(i);
+            i++
+        }
+        else{
+            clearInterval(typing)
+        }
+
+    }, speed)
+}
+
+  window.onload = function(){
+    typeWriter("name", 225);
+
+  };
