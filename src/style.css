@@ -99,15 +99,23 @@ header {
     margin: 50px;
 }
 
-.name-container{
-    width: 610px;
+.name-container {
+    width: 100%; 
+    min-height: 300px; 
 }
 
-#name {
+#first, #last {
     font-weight: 700;
     font-size: 200px;
+    width: 955px; 
+    overflow: hidden;
+    display: inline-block;
+    visibility: hidden; /* Initially hide the text */
+
 }
 
-#bio{
+#bio {
     font-size: 30px;
+    margin-top: 30px; 
+    text-align: center;
 }
