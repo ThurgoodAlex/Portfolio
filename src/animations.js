@@ -1,4 +1,5 @@
 //https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+// used the above resource and had to make it a async function
 function typeWriter(elementId, speed) {
     
     return new Promise((resolve) => {
